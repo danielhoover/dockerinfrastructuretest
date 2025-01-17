@@ -1,0 +1,10 @@
+version: '3.8' #spezifiziert die Version - genaueres findet ihr hier https://stackoverflow.com/a/76157215
+
+services:
+  db_server:
+    container_name: 'mariadbtest'
+    image: mariadb:10.3 # das ist der image name
+    ports:
+      - '3306:3306' #das kennen wir vorher von dem run auch schon
+    environment:
+      MYSQL_ROOT_PASSWORD: 'mypass' # auch diese zeile kennen wir schon
